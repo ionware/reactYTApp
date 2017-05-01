@@ -19,7 +19,7 @@ class App extends Component
             selectedVideo: null
         };
 
-        this.videoSearch('redux');
+        this.videoSearch('latest');
     }
 
     videoSearch(term){
@@ -37,7 +37,14 @@ class App extends Component
 
         return (
             <div>
-                <SearchBar videoSearch={(searchTerm) => { videoSearch(searchTerm) } }/>
+                <div className="row" id="search">
+                    <div className="col-sm-6 col-sm-offset-3 align-self-center">
+                        <SearchBar videoSearch={(searchTerm) => { videoSearch(searchTerm) } }/>
+                    </div>
+            </div>
+            <div className="row">
+
+            </div>
                 <VideoDetails video={ this.state.selectedVideo}/>
                 <VideoList
                     onVideoSelect={ (video) => { this.setState({selectedVideo: video})} }

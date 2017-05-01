@@ -9,7 +9,9 @@ class SearchBar extends Component
     }
 
     render() {
-        return (<input onChange={(event) => { this.onInputChange(event) } }/>);
+        return (<input onChange={(event) => { this.onInputChange(event) } }
+                       className="form-control"
+                       placeholder="Search for a video"/>);
     }
 
     onInputChange(event){

@@ -1,0 +1,49 @@
+//Colors Declaration
+$green: #27AE60;
+$red: #E74C3C;
+$blue: #3498DB;
+$orange: #D35400;
+$asphalt: #34495E;
+
+$default-color: $green !default;  //Update your color's choice
+
+body {
+  font-family: Lato, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: $default-color;
+}
+h1, h2, h3, h4, h5, h6{
+  font-weight: 400;
+  font-family: Baloo, cursive;
+}
+
+#search{
+  padding: 15px;
+  margin: 15px 0;
+}
+
+.details{
+  margin-top: 5px;
+  background-color: $default-color;
+  color: #fff;
+  padding: 15px 10px;
+}
+
+.form-control {
+  border-color: $default-color;
+  color: $default-color !important;
+
+  &:focus {
+    border-color: $default-color;
+  }
+}
+
+li, .list-group-item {
+  border-color: lighten($default-color, 40%);
+
+  &:hover, & active{
+    background-color: $default-color;
+    color: #fff;
+    cursor: hand;
+  }
+}
